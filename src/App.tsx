@@ -11,6 +11,8 @@ import {
   GOOGLE_MAPS_LINK,
 } from "./data";
 
+const base = import.meta.env.BASE_URL;
+
 function App() {
   return (
     <>
@@ -18,7 +20,7 @@ function App() {
       <section className="hero" id="hero">
         <div className="hero__bg">
           <img
-            src="/hero-bg.jpg"
+            src={`${base}hero-bg.jpg`}
             alt="Interior de academia de luta em Aracaju com iluminação dramática"
             loading="eager"
           />
@@ -69,7 +71,7 @@ function App() {
           <div className="bio__inner">
             <div className="bio__image-wrap">
               <img
-                src={BIO.image}
+                src={`${base}betao.jpg`}
                 alt="Betão, professor e ex-lutador de kickboxing em Aracaju"
                 loading="lazy"
               />
