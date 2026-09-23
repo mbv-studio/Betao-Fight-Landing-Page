@@ -196,32 +196,7 @@ function HomePage() {
           </div>
         </section>
 
-        <section className="personal-section" id="personal-fight">
-          <div className="container personal-card">
-            <div>
-              <span className="eyebrow">Atendimento individual</span>
-              <h2>{PERSONAL_FIGHT.title}</h2>
-              <p className="personal-card__subtitle">{PERSONAL_FIGHT.subtitle}</p>
-              <p className="personal-card__text">{PERSONAL_FIGHT.text}</p>
-            </div>
-
-            <div className="personal-card__aside">
-              <div className="benefit-list">
-                {PERSONAL_FIGHT.benefits.map((benefit) => (
-                  <span key={benefit}>{benefit}</span>
-                ))}
-              </div>
-              <a
-                className="button button--primary"
-                href={PERSONAL_WHATSAPP_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {PERSONAL_FIGHT.cta}
-              </a>
-            </div>
-          </div>
-        </section>
+        
 
         <section className="section location" id="localizacao">
           <div className="container location__inner">
