@@ -28,6 +28,33 @@ export const BIO = {
   image: "/betao.jpg",
 } as const;
 
+/* ── Galeria – Centro de Treinamento ── */
+export interface GalleryImage {
+  src: string;
+  alt: string;
+}
+
+export const GALLERY = {
+  title: "Nosso Centro de Treinamento",
+  subtitle:
+    "Estrutura completa para você treinar com segurança e intensidade. Sacos de pancada, ringue oficial, área de musculação funcional e um ambiente que respira luta.",
+  cta: "Quero conhecer de perto",
+  images: [
+    {
+      src: "/gallery-1.png",
+      alt: "Turma feminina da Betão Fight posando em grupo após o treino",
+    },
+    {
+      src: "/gallery-2.png",
+      alt: "Equipe Betão Fight comemorando conquista em evento de luta",
+    },
+    {
+      src: "/gallery-3.png",
+      alt: "Betão treinando com aluna no manopla na academia",
+    },
+  ] as GalleryImage[],
+} as const;
+
 /* ── Modalidades ── */
 export interface Modality {
   name: string;
@@ -58,38 +85,78 @@ export const SCHEDULE: ScheduleGroup[] = [
   {
     days: "SEG • QUA • SEX",
     slots: [
-      { time: "08:00", modality: "Turma Mista" },
+      { time: "08:00", modality: "Betão · Turmas Mistas" },
       { time: "11:00", modality: "Personalizado" },
+      { time: "12:00", modality: "Betão · Turmas Mistas" },
       { time: "14:00", modality: "Personalizado" },
-      { time: "15:00", modality: "MMA (Prof. Betão)" },
-      { time: "16:00", modality: "Turma Mista" },
-      { time: "17:00", modality: "Turma Mista (Prof. Entony)" },
-      { time: "19:00", modality: "Turma Mista" },
-      { time: "20:00", modality: "MMA (Prof. Betão)" },
-      { time: "21:00", modality: "Turma Mista" },
+      { time: "15:00", modality: "Muay Thai · Júlia" },
+      { time: "16:00", modality: "Betão · Turmas Mistas" },
+      { time: "17:00", modality: "Kickboxing · Entony" },
+      { time: "18:00", modality: "Jiu-Jítsu · Cleonancio" },
+      { time: "19:00", modality: "Betão · Turmas Mistas" },
+      { time: "20:00", modality: "Betão · Turmas Mistas" },
+      { time: "21:00", modality: "Betão · Turmas Mistas" },
     ],
   },
   {
     days: "TER • QUI",
     slots: [
+      { time: "08:00", modality: "Muay Thai · Júlia" },
       { time: "11:00", modality: "Personalizado" },
-      { time: "15:00", modality: "Turma Mista" },
-      { time: "16:00", modality: "MMA (Prof. Betão)" },
-      { time: "17:00", modality: "Personalizado" },
-      { time: "18:00", modality: "MMA (Prof. Betão)" },
-      { time: "19:00", modality: "Turma Mista" },
-      { time: "20:00", modality: "Boxe (Prof. Andreis)" },
+      { time: "15:00", modality: "Betão · Turmas Mistas" },
+      { time: "16:00", modality: "MMA" },
+      { time: "18:00", modality: "Kickboxing · Entony" },
+      { time: "19:00", modality: "Betão · Turmas Mistas" },
+      { time: "20:30", modality: "Boxe · Andreis" },
     ],
   },
   {
     days: "SÁBADO",
     slots: [
-      { time: "08:00", modality: "Turma Mista" },
-      { time: "10:00", modality: "Turma Mista" },
-      { time: "11:00", modality: "Sparing" },
+      { time: "08:00", modality: "Betão · Turmas Mistas" },
+      { time: "09:00", modality: "Treino Físico" },
+      { time: "10:00", modality: "Sparring" },
     ],
   },
 ];
+
+/* ── Personal Fight – Atendimento a Domicílio ── */
+export interface PersonalBenefit {
+  icon: string;
+  title: string;
+  desc: string;
+}
+
+export const PERSONAL_FIGHT = {
+  badge: "NOVO",
+  title: "Personal Fight",
+  subtitle: "Treino personalizado na sua casa",
+  description:
+    "O Betão vai até você. Treinos sob medida, adaptados ao seu objetivo — seja emagrecer, ganhar massa muscular, melhorar o condicionamento ou simplesmente aprender a lutar. Sem desculpas, sem deslocamento.",
+  benefits: [
+    {
+      icon: "🔥",
+      title: "Emagrecimento",
+      desc: "Treinos intensos para queima de gordura com técnicas de luta.",
+    },
+    {
+      icon: "💪",
+      title: "Ganho de massa",
+      desc: "Exercícios funcionais combinados com artes marciais.",
+    },
+    {
+      icon: "🕐",
+      title: "Horário flexível",
+      desc: "Você escolhe o melhor dia e horário para treinar.",
+    },
+    {
+      icon: "🏠",
+      title: "Na sua casa",
+      desc: "Sem deslocamento. O treino vai até onde você estiver.",
+    },
+  ] as PersonalBenefit[],
+  cta: "Agendar meu Personal Fight",
+} as const;
 
 /* ── CTA Secundário ── */
 export const CTA = {
